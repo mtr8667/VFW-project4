@@ -1,8 +1,7 @@
 // Matthew RIchter 
 // Visual frameworks - Full Sail University
-// Project: Web App Part 3
-// April 16, 2012
-
+// Project: Web App Part 4
+// April 23, 2012
 // Wait until the DOM is ready 	
 window.addEventListener("DOMContentLoaded", function(){	
 	// getElementById function
@@ -95,7 +94,8 @@ window.addEventListener("DOMContentLoaded", function(){
 	function getProjects(){
 		toggleControls("on");
 		if(localStorage.length === 0 ){
-			alert("There is no data in local storage.");
+			alert("There is no data in local storage so default data has been added.");
+			autoFillData();
 		}
 		var makeDiv	= document.createElement("div");
 		makeDiv.setAttribute("id", "items");
@@ -113,6 +113,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement("ul");
 			makeLi.appendChild(makeSubList);
+			getImage(obj.project[1], makeSubList);
 			for(var n in obj){
 				var makeSubLi = document.createElement("li");
 				makeSubList.appendChild(makeSubLi);
@@ -122,6 +123,23 @@ window.addEventListener("DOMContentLoaded", function(){
 				}
 				// create links/buttons (edit & delete) for each project in local storage
 				makeItemLinks(localStorage.key(i), linksLi); 
+		}
+	}
+	// Get the project image for current project being displayed
+	function getImage(projectName, makeSubList){
+		var imageLi = document.createElement("li");
+		makeSubList.appendChild(imageLi);
+		var newImg = document.createElement("img");
+		var setSrc = newImg	.setAttribute("src", "images/" + projectName + ".png");
+		imageLi.appendChild(newImg);
+	}
+	// Auto populate local storage from json
+	// actual json object data for this to work will come from json.js which is loaded from HTML page
+	// the main.js and json.js files can see eachothers variables - that's why we can loop through json in the main.js file
+	function autoFillData(){
+		for( var n in json){
+			var 	id 	= Math.floor(Math.random()*10000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
 	}
 	// This function is going to create the link/buttons for each project when accessed
@@ -160,11 +178,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		$("phone").value 		= item.phone[1];
 		var radios = document.forms[0].cost;
 		for(var i=0; i<radios.length; i++){
-			if(radios[i].value == "Low" && item.cost[1] == "Low"){
+			if(radios[i].value == "low" && item.cost[1] == "low"){
 				radios[i].setAttribute("checked", "checked");
-			}else if(radios[i].value == "Medium" && item.cost[1] == "Medium"){
+			}else if(radios[i].value == "medium" && item.cost[1] == "medium"){
 				radios[i].setAttribute("checked", "checked");
-			}else if(radios[i].value == "High" && item.cost[1] == "High"){
+			}else if(radios[i].value == "high" && item.cost[1] == "high"){
 				radios[i].setAttribute("checked", "checked");
 			}
 		}
@@ -221,8 +239,6 @@ window.addEventListener("DOMContentLoaded", function(){
 		getLname.style.border 			= "1px solid black";
 		getEmail.style.border 			= "1px solid black";
 		getPhone.style.border 			= "1px solid black";
-	
-		
 		// get error messages 
 		var messageArray = [];
 		// Project type validation
@@ -286,9 +302,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			cost,				
 			emailOkay			=	"No",
 			errorMessage		=  $("errors")
-	
 	;
-	
 	makeProjectTypes();  	
 	// Set link & submit Click Events 
  	var showProjectsLink = $("showProjectsLink");
