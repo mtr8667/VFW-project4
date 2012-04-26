@@ -6,7 +6,7 @@ Matthew Richter
 Font shorthand  font: style variant weight size/line height font family;
 */
 
-body{font-family:Arial, Helvetica, san-serif; margin: 0px 0px 0px 0px;padding: 0px; 
+body{font-family:Arial, Helvetica, san-serif; width: 480px; margin: 0px 0px 0px 0px;padding: 0px; 
 background: -moz-linear-gradient(top, #ffffff 0%, #FEFFED 50%, #ffffff 100%, #ffffff 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#FEFFED), color-stop(100%,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, #ffffff 0%,#FEFFED 50%,#ffffff 100%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
