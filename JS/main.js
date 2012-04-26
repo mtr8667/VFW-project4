@@ -186,8 +186,8 @@ window.addEventListener("DOMContentLoaded", function(){
 				radios[i].setAttribute("checked", "checked");
 			}
 		}
-		if(item.cost[i] == "Yes"){
-			$("cost").setAttribute("checked", "checked");
+		if(item.emailOkay[1] == "Yes"){
+			$("emailOkay").setAttribute("checked", "checked");
 		}
 		$("priority").value = item.priority[1];
 		$("startDate").value = item.startDate[1];
@@ -298,7 +298,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		
 	}	
 	// Variable default Project Types array
-	var 	projectTypes		= ["- Select Project -","Addition", "Kitchen", "Bathroom", "Roof", "Basement"],
+	var 	projectTypes		= ["- Select Project -","Addition", "Kitchen", "Lavatory", "Roof", "Basement"],
 			cost,				
 			emailOkay			=	"No",
 			errorMessage		=  $("errors")

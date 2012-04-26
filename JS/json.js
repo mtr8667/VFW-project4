@@ -31,8 +31,8 @@ var json = {
 		"jobNotes":		["Job Notes:", "600 sq ft addition of the family room"]
 	},
 	"project3":		{
-		"project":		["Project Type:", "Bathroom"],
-		"pname":		["Project Name:", "Richter Bathroom"],
+		"project":		["Project Type:", "Lavatory"],
+		"pname":		["Project Name:", "Richter Lavatory"],
 		"fname":		["First Name:", "Matthew"],
 		"lname": 		["Last Name:", "Richter"],
 		"email":			["Email:", "matt@gorichter.com"],
