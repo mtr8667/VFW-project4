@@ -3,10 +3,8 @@ Project: Web App Part 4
 Visual Frameworks VFW 1204
 April 23, 2012
 Matthew Richter
-Font shorthand  font: style variant weight size/line height font family;
 */
-
-body{font-family:Arial, Helvetica, san-serif; width: 480px; margin: 0px 0px 0px 0px;padding: 0px; 
+body {font-family:Arial, Helvetica, san-serif; width: 480px; margin: 0px 0px 0px 0px;padding: 0px; 
 background: -moz-linear-gradient(top, #ffffff 0%, #FEFFED 50%, #ffffff 100%, #ffffff 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#FEFFED), color-stop(100%,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, #ffffff 0%,#FEFFED 50%,#ffffff 100%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
@@ -15,8 +13,6 @@ background: -ms-linear-gradient(top, #ffffff 0%,#FEFFED 50%,#ffffff 100%,#ffffff
 background: linear-gradient(top, #ffffff 0%,#FEFFED 50%,#ffffff 100%,#ffffff 100%); /* W3C */
 background-size: 480px 690px;
 }
-
-
 h1	{
 	margin: 0px 0px 5px 0px;
 	border: 0px solid #287613;

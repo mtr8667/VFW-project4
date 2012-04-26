@@ -2,7 +2,6 @@
 // Visual frameworks - Full Sail University
 // Project: Web App Part 4
 // April 23, 2012
-
 var json = {
 	"project1":		{
 		"project":		["Project Type:", "Kitchen"],
